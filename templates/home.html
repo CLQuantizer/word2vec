@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+<title>HOME </title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+<p> Welcome to the word similarity api</p>
+
+<div id ="sent" style = 'text-align: left;font-size:16px;font-family: Garamond;'>{{sent}}</div>
+<br></br>
+<label for="site-search">Search similar words:</label>
+<input type="search" id="site-search" name="q"
+       aria-label="Search for similar words">
+<button id='search' onclick="loadSent()">Search</button>
+
+</body>
+
+<script>
+word = document.getElementById('site-search').value;
+
+function generate_table(data) {
+  // get the reference for the body
+  var w = data.words;
+  var p = data.probs;
+  var body = document.getElementsByTagName("body")[0];
+  // creates a <table> element and a <tbody> element
+  var tbl = document.createElement("table");
+  var tblBody = document.createElement("tbody");
+  // creating all cells
+  for (var i = 0; i < w.length; i++) {
+    // creates a table row
+    var row = document.createElement("tr");
+
+    for (var j = 0; j < 2; j++) {
+      // Create a <td> element and a text node, make the text
+      // node the contents of the <td>, and put the <td> at
+      // the end of the table row
+      var cell = document.createElement("td");
+      if (j==0){var cellText = document.createTextNode(w[i]);}
+      else{var cellText = document.createTextNode(p[i]);}
+      
+      cell.appendChild(cellText);
+      row.appendChild(cell);
+    }
+
+    // add the row to the end of the table body
+    tblBody.appendChild(row);
+  }
+
+  // put the <tbody> in the <table>
+  tbl.appendChild(tblBody);
+  // appends <table> into <body>
+  body.appendChild(tbl);
+  // sets the border attribute of tbl to 2;
+  tbl.setAttribute("border", data.words.length);
+}
+
+function loadSent()
+{
+	// alert(word);
+    $.ajax({
+        url:'/similar/'+ word,
+        type: 'POST',
+        dataType: 'json',
+        success: function(data){generate_table(data)}
+        	// alert(word);
+			
+          });
+}
+
+// document.getElementById("search").addEventListener("click", function() {
+//   document.getElementById("demo").innerHTML = "Hello World";
+// }); 
+</script>
+</html>
