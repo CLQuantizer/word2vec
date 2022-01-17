@@ -4,28 +4,31 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
-<body>
-<p> Welcome to the word similarity api</p>
+<body style ="text-align: center">
+<h2> <b>Welcome to the Related Word API</b></h2>
 
-<div id ="sent" style = 'text-align: left;font-size:16px;font-family: Garamond;'>{{sent}}</div>
+<div id ="sent" style = 'text-align: center;font-size:16px;font-family: Garamond;'>{{sent}}</div>
+ <p><b>Note that some words may not be in the vocab</b></p>
+ <form id = 'wform' method="POST" style ="text-align: center">
+  <label for="word">Search related words:</label>
+  <input type="text" id="w" value="go">  <input type="submit" value="Search">
+</form> 
 <br></br>
-<label for="site-search">Search similar words:</label>
-<input type="search" id="site-search" name="q"
-       aria-label="Search for similar words">
-<button id='search' onclick="call()">Search</button>
-
 </body>
 
 <script>
-word = document.getElementById('site-search').value;
 
 function generate_table(data) {
-  // get the reference for the body
+
+  var t = document.getElementById('norep'); 
+  if(t)t.parentNode.removeChild(t);
+  
   var w = data.words;
   var p = data.probs;
   var body = document.getElementsByTagName("body")[0];
   // creates a <table> element and a <tbody> element
   var tbl = document.createElement("table");
+  tbl.setAttribute("id", "norep");
   var tblBody = document.createElement("tbody");
   // creating all cells
   for (var i = 0; i < w.length; i++) {
@@ -46,31 +49,34 @@ function generate_table(data) {
 
     // add the row to the end of the table body
     tblBody.appendChild(row);
-  }
 
+  }
   // put the <tbody> in the <table>
   tbl.appendChild(tblBody);
   // appends <table> into <body>
   body.appendChild(tbl);
   // sets the border attribute of tbl to 2;
   tbl.setAttribute("border", data.words.length);
+  tbl.setAttribute("align", 'center');
+
 }
 
-function call()
-{
-	// alert(word);
+$(document).ready(function () {
+  $("form").submit(function (event) {
+    var formData = {word: $("#w").val(),};
+    // alert(formData);
     $.ajax({
-        url:'/similar/'+ word,
-        type: 'POST',
-        dataType: 'json',
-        success: function(data){generate_table(data)}
-        	// alert(word);
-			
-          });
-}
-
-// document.getElementById("search").addEventListener("click", function() {
-//   document.getElementById("demo").innerHTML = "Hello World";
-// }); 
+      type: "POST",
+      url: "/related/"+ formData.word,
+      data: formData,
+      dataType: "json",
+      encode: true,
+      success: function(data){
+        generate_table(data);
+      } 
+    });
+    event.preventDefault();
+  });
+}); 
 </script>
 </html>

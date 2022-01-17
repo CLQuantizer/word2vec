@@ -8,22 +8,22 @@ from fastapi.templating import Jinja2Templates
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 
-glove_vectors = gensim.downloader.load('glove-wiki-gigaword-50')
+# glove_vectors = gensim.downloader.load('glove-wiki-gigaword-50')
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 # f=open('glove50','wb')
 # pickle.dump(glove_vectors,f)
-# f = open('glove50','rb')
-# glove_vectors = pickle.load(f)
+f = open('glove50','rb')
+glove_vectors = pickle.load(f)
 
-@app.post("/similar/{word}")
-async def read_item(word):
-	df = pd.DataFrame(glove_vectors.most_similar(word,topn=20),columns = ['words','sim'])
+@app.post("/related/{word}")
+async def related(word):
+	df = pd.DataFrame(glove_vectors.most_similar(word,topn=15),columns = ['words','sim'])
 	words = list(df['words'])
 	probs = [round(x,2) for x in list(df['sim'])]
 	return {'words':words, 'probs':probs}
 
 @app.get('/',response_class = HTMLResponse)
 async def home(request: Request):
-    sent = 'key in a word to see similar words according to Glove50'
+    sent = 'Key in a lower case word for its 15 most related words in Glove50'
     return templates.TemplateResponse('home.html',{"request": request, 'sent':sent})
