@@ -12,7 +12,7 @@
 <label for="site-search">Search similar words:</label>
 <input type="search" id="site-search" name="q"
        aria-label="Search for similar words">
-<button id='search' onclick="loadSent()">Search</button>
+<button id='search' onclick="call()">Search</button>
 
 </body>
 
@@ -56,7 +56,7 @@ function generate_table(data) {
   tbl.setAttribute("border", data.words.length);
 }
 
-function loadSent()
+function call()
 {
 	// alert(word);
     $.ajax({
