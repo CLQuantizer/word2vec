@@ -4,11 +4,15 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
-<body style ="text-align: center">
-<h2> <b>Welcome to the Related Word API</b></h2>
+<ul style = 'text-align: left'>
+  <li><a href="/">Home </a></li><li><a href="/writings"> Writings</a></li>
+</ul>
 
-<div id ="sent" style = 'text-align: center;font-size:16px;font-family: Garamond;'>{{sent}}</div>
- <p><b>Note that some words may not be in the vocab</b></p>
+<body style ="text-align: center">
+<h3><b>Welcome to the Related Word API</b></h3>
+
+<div id ="sent" style = 'text-align: center;font-size:14px;font-family: Garamond;'>{{sent}}</div>
+ <p>Note that some words may not be in the vocab</p>
  <form id = 'wform' method="POST" style ="text-align: center">
   <label for="word">Search related words:</label>
   <input type="text" id="w" value="go">  <input type="submit" value="Search">
@@ -19,7 +23,6 @@
 <script>
 
 function generate_table(data) {
-
   var t = document.getElementById('norep'); 
   if(t)t.parentNode.removeChild(t);
   
@@ -41,24 +44,20 @@ function generate_table(data) {
       // the end of the table row
       var cell = document.createElement("td");
       if (j==0){var cellText = document.createTextNode(w[i]);}
-      else{var cellText = document.createTextNode(p[i]);}
-      
+      else{var cellText = document.createTextNode(p[i]);} 
       cell.appendChild(cellText);
       row.appendChild(cell);
     }
-
     // add the row to the end of the table body
     tblBody.appendChild(row);
-
   }
   // put the <tbody> in the <table>
   tbl.appendChild(tblBody);
   // appends <table> into <body>
   body.appendChild(tbl);
   // sets the border attribute of tbl to 2;
-  tbl.setAttribute("border", data.words.length);
+  tbl.setAttribute("border", 2);
   tbl.setAttribute("align", 'center');
-
 }
 
 $(document).ready(function () {

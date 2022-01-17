@@ -27,3 +27,8 @@ async def related(word):
 async def home(request: Request):
     sent = 'Key in a lower case word for its 15 most related words in Glove50'
     return templates.TemplateResponse('home.html',{"request": request, 'sent':sent})
+
+@app.get('/writings',response_class = HTMLResponse)
+async def writings(request: Request):
+    l = [1,2,3]
+    return templates.TemplateResponse('writings.html',{"request": request, 'l':l})
