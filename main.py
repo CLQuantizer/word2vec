@@ -8,11 +8,13 @@ from fastapi.templating import Jinja2Templates
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 
-# glove_vectors = gensim.downloader.load('glove-wiki-gigaword-50')
+#glove_vectors = gensim.downloader.load('glove-wiki-gigaword-50')
 app = FastAPI()
+app.mount('/static',StaticFiles(directory='static'),name='static')
 templates = Jinja2Templates(directory="templates")
-# f=open('glove50','wb')
-# pickle.dump(glove_vectors,f)
+
+#f=open('glove50','wb')
+#pickle.dump(glove_vectors,f)
 f = open('glove50','rb')
 glove_vectors = pickle.load(f)
 
