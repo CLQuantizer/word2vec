@@ -1,0 +1,686 @@
+INFO:     Started server process [122662]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+INFO:     192.76.8.64:45338 - "GET / HTTP/1.1" 200 OK
+INFO:     192.76.8.64:45340 - "GET /js/jquery-ui-1.8.18.custom.min.js HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45344 - "GET /js/canvas2image.js HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45348 - "GET /js/base64.js HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45338 - "GET /js/jquery-1.7.1.min.js HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45342 - "GET /js/syntree.js HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.4:56190 - "GET / HTTP/1.1" 200 OK
+INFO:     10.7.0.4:56190 - "GET /css/cupertino/jquery-ui-1.8.18.custom.css HTTP/1.1" 200 OK
+INFO:     10.7.0.4:56192 - "GET /js/jquery-ui-1.8.18.custom.min.js HTTP/1.1" 200 OK
+INFO:     10.7.0.4:56193 - "GET /js/base64.js HTTP/1.1" 200 OK
+INFO:     10.7.0.4:56191 - "GET /js/jquery-1.7.1.min.js HTTP/1.1" 200 OK
+INFO:     10.7.0.4:56194 - "GET /js/canvas2image.js HTTP/1.1" 200 OK
+INFO:     10.7.0.4:56195 - "GET /js/syntree.js HTTP/1.1" 200 OK
+INFO:     10.7.0.4:56190 - "GET /css/cupertino/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png HTTP/1.1" 200 OK
+INFO:     10.7.0.4:56191 - "GET /css/cupertino/images/ui-bg_glass_80_d7ebf9_1x400.png HTTP/1.1" 200 OK
+INFO:     10.7.0.4:56190 - "GET /css/cupertino/images/ui-bg_glass_50_3baae3_1x400.png HTTP/1.1" 200 OK
+INFO:     10.7.0.4:56196 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     10.7.0.4:56190 - "GET /all_writings HTTP/1.1" 307 Temporary Redirect
+INFO:     10.7.0.4:56190 - "GET /all_writings/ HTTP/1.1" 200 OK
+INFO:     10.7.0.4:56198 - "GET /writing_interface HTTP/1.1" 307 Temporary Redirect
+INFO:     10.7.0.4:56198 - "GET /writing_interface/ HTTP/1.1" 200 OK
+INFO:     10.7.0.4:56198 - "GET /all_writings HTTP/1.1" 307 Temporary Redirect
+INFO:     10.7.0.4:56198 - "GET /all_writings/ HTTP/1.1" 200 OK
+INFO:     10.7.0.4:56199 - "GET /css/cupertino/images/ui-bg_glass_100_e4f1fb_1x400.png HTTP/1.1" 200 OK
+INFO:     10.7.0.4:56200 - "GET /?i=[NP%20[N%20Alice]%20and%20[N%20Bob]] HTTP/1.1" 200 OK
+INFO:     10.7.0.4:56200 - "GET /?i=[S%20[X_a%20Movement]%20[Y%20example%20%3Ca%3E]] HTTP/1.1" 200 OK
+INFO:     10.7.0.4:56200 - "GET /?i=[S%20[X_a%20Movement]%20[Y%20example%20%3Ca%3E]] HTTP/1.1" 200 OK
+INFO:     10.7.0.4:56200 - "POST /related/go HTTP/1.1" 200 OK
+INFO:     10.7.0.4:56201 - "POST /related/Free HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/fastapi/applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/fastapi/routing.py", line 226, in app
+    raw_response = await run_endpoint_function(
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/fastapi/routing.py", line 159, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/root/webapps/word2vec/./main.py", line 39, in related
+    df = pd.DataFrame(glove_vectors.most_similar(word,topn=15),columns = ['words','sim'])
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/gensim/models/keyedvectors.py", line 773, in most_similar
+    mean.append(weight * self.get_vector(key, norm=True))
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/gensim/models/keyedvectors.py", line 438, in get_vector
+    index = self.get_index(key)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/gensim/models/keyedvectors.py", line 412, in get_index
+    raise KeyError(f"Key '{key}' not present")
+KeyError: "Key 'Free' not present"
+INFO:     10.7.0.4:56202 - "POST /related/free HTTP/1.1" 200 OK
+INFO:     10.7.0.4:56204 - "GET /?i=[S%20[X_a%20Movement]%20[Y%20example%20%3Ca%3E]] HTTP/1.1" 200 OK
+INFO:     10.7.0.4:56204 - "GET /writing_interface HTTP/1.1" 307 Temporary Redirect
+INFO:     10.7.0.4:56204 - "GET /writing_interface/ HTTP/1.1" 200 OK
+INFO:     10.7.0.4:56204 - "POST /writings/%7Bwriting_id%7D HTTP/1.1" 200 OK
+INFO:     10.7.0.4:56204 - "GET /all_writings HTTP/1.1" 307 Temporary Redirect
+INFO:     10.7.0.4:56204 - "GET /all_writings/ HTTP/1.1" 200 OK
+INFO:     10.7.0.4:56206 - "POST /writings/%7Bwriting_id%7D HTTP/1.1" 200 OK
+INFO:     10.7.0.4:56206 - "GET /all_writings HTTP/1.1" 307 Temporary Redirect
+INFO:     10.7.0.4:56206 - "GET /all_writings/ HTTP/1.1" 200 OK
+INFO:     10.7.0.4:56208 - "GET / HTTP/1.1" 200 OK
+INFO:     10.7.0.4:56210 - "GET /writing_interface HTTP/1.1" 307 Temporary Redirect
+INFO:     10.7.0.4:56210 - "GET /writing_interface/ HTTP/1.1" 200 OK
+INFO:     10.7.0.4:56210 - "GET /all_writings HTTP/1.1" 307 Temporary Redirect
+INFO:     10.7.0.4:56210 - "GET /all_writings/ HTTP/1.1" 200 OK
+INFO:     10.7.0.4:56214 - "GET / HTTP/1.1" 200 OK
+INFO:     10.7.0.4:56215 - "POST /related/go HTTP/1.1" 200 OK
+INFO:     194.31.98.117:34454 - "GET / HTTP/1.1" 200 OK
+INFO:     194.31.98.117:34664 - "POST /HNAP1/ HTTP/1.1" 404 Not Found
+INFO:     10.7.0.4:56215 - "POST /related/go HTTP/1.1" 200 OK
+INFO:     10.7.0.4:56215 - "POST /related/Play HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/fastapi/applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/fastapi/routing.py", line 226, in app
+    raw_response = await run_endpoint_function(
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/fastapi/routing.py", line 159, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/root/webapps/word2vec/./main.py", line 39, in related
+    df = pd.DataFrame(glove_vectors.most_similar(word,topn=15),columns = ['words','sim'])
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/gensim/models/keyedvectors.py", line 773, in most_similar
+    mean.append(weight * self.get_vector(key, norm=True))
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/gensim/models/keyedvectors.py", line 438, in get_vector
+    index = self.get_index(key)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/gensim/models/keyedvectors.py", line 412, in get_index
+    raise KeyError(f"Key '{key}' not present")
+KeyError: "Key 'Play' not present"
+INFO:     10.7.0.4:56216 - "POST /related/play HTTP/1.1" 200 OK
+INFO:     Started server process [122784]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+INFO:     192.76.8.64:45350 - "GET / HTTP/1.1" 200 OK
+INFO:     192.76.8.64:45350 - "GET /js/jquery-1.7.1.min.js HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45358 - "GET /js/syntree.js HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45354 - "GET /js/base64.js HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45352 - "GET /js/jquery-ui-1.8.18.custom.min.js HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45356 - "GET /js/canvas2image.js HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45350 - "GET / HTTP/1.1" 200 OK
+INFO:     192.76.8.64:45352 - "GET /js/jquery-1.7.1.min.js HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45354 - "GET /js/jquery-ui-1.8.18.custom.min.js HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45356 - "GET /js/base64.js HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45358 - "GET /js/canvas2image.js HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45350 - "GET /js/syntree.js HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45350 - "GET /writing_interface HTTP/1.1" 307 Temporary Redirect
+INFO:     192.76.8.64:45350 - "GET /writing_interface/ HTTP/1.1" 200 OK
+INFO:     192.76.8.64:45350 - "GET /all_writings HTTP/1.1" 307 Temporary Redirect
+INFO:     192.76.8.64:45350 - "GET /all_writings/ HTTP/1.1" 200 OK
+INFO:     192.76.8.64:45360 - "POST /related/go HTTP/1.1" 200 OK
+INFO:     192.76.8.64:45360 - "POST /related/Ha HTTP/1.1" 200 OK
+INFO:     37.0.8.109:37950 - "GET /config/getuser?index=0 HTTP/1.1" 404 Not Found
+INFO:     45.83.64.148:15826 - "GET / HTTP/1.1" 200 OK
+INFO:     45.83.65.58:16452 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.76.8.64:45362 - "GET / HTTP/1.1" 200 OK
+INFO:     192.76.8.64:45364 - "GET /css/cupertino/jquery-ui-1.8.18.custom.css HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45364 - "GET /css/cupertino/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45362 - "GET /css/cupertino/images/ui-bg_glass_80_d7ebf9_1x400.png HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45366 - "GET /css/cupertino/images/ui-bg_glass_50_3baae3_1x400.png HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45362 - "POST /related/go HTTP/1.1" 200 OK
+INFO:     192.76.8.64:45362 - "POST /related/To HTTP/1.1" 200 OK
+INFO:     192.76.8.64:45368 - "GET /writing_interface HTTP/1.1" 307 Temporary Redirect
+INFO:     192.76.8.64:45368 - "GET /writing_interface/ HTTP/1.1" 200 OK
+INFO:     192.76.8.64:45368 - "GET /all_writings HTTP/1.1" 307 Temporary Redirect
+INFO:     192.76.8.64:45368 - "GET /all_writings/ HTTP/1.1" 200 OK
+INFO:     192.76.8.64:45370 - "GET / HTTP/1.1" 200 OK
+INFO:     192.76.8.64:45370 - "GET /js/jquery-1.7.1.min.js HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45372 - "GET /js/canvas2image.js HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45382 - "GET /js/base64.js HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45378 - "GET /js/syntree.js HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45374 - "GET /js/jquery-ui-1.8.18.custom.min.js HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45370 - "GET /writing_interface HTTP/1.1" 307 Temporary Redirect
+INFO:     192.76.8.64:45370 - "GET /writing_interface/ HTTP/1.1" 200 OK
+INFO:     192.76.8.64:45370 - "GET /all_writings HTTP/1.1" 307 Temporary Redirect
+INFO:     192.76.8.64:45370 - "GET /all_writings/ HTTP/1.1" 200 OK
+INFO:     192.76.8.64:45370 - "GET / HTTP/1.1" 200 OK
+INFO:     192.76.8.64:45370 - "GET /writing_interface HTTP/1.1" 307 Temporary Redirect
+INFO:     192.76.8.64:45370 - "GET /writing_interface/ HTTP/1.1" 200 OK
+INFO:     192.76.8.64:45370 - "GET / HTTP/1.1" 200 OK
+INFO:     10.7.0.2:50133 - "GET / HTTP/1.1" 200 OK
+INFO:     10.7.0.2:50133 - "GET /css/cupertino/jquery-ui-1.8.18.custom.css HTTP/1.1" 200 OK
+INFO:     10.7.0.2:50135 - "GET /js/jquery-1.7.1.min.js HTTP/1.1" 200 OK
+INFO:     10.7.0.2:50136 - "GET /js/jquery-ui-1.8.18.custom.min.js HTTP/1.1" 200 OK
+INFO:     10.7.0.2:50137 - "GET /js/base64.js HTTP/1.1" 200 OK
+INFO:     10.7.0.2:50133 - "GET /js/canvas2image.js HTTP/1.1" 200 OK
+INFO:     10.7.0.2:50137 - "GET /js/syntree.js HTTP/1.1" 200 OK
+INFO:     10.7.0.2:50133 - "GET /css/cupertino/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png HTTP/1.1" 200 OK
+INFO:     10.7.0.2:50135 - "GET /css/cupertino/images/ui-bg_glass_80_d7ebf9_1x400.png HTTP/1.1" 200 OK
+INFO:     10.7.0.2:50136 - "GET /css/cupertino/images/ui-bg_glass_50_3baae3_1x400.png HTTP/1.1" 200 OK
+INFO:     10.7.0.2:50133 - "POST /related/go HTTP/1.1" 200 OK
+INFO:     10.7.0.2:50133 - "GET /writing_interface HTTP/1.1" 307 Temporary Redirect
+INFO:     10.7.0.2:50133 - "GET /writing_interface/ HTTP/1.1" 200 OK
+INFO:     104.209.233.178:61207 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     104.209.233.178:61232 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     10.7.0.2:58434 - "GET / HTTP/1.1" 200 OK
+INFO:     10.7.0.2:58433 - "GET /css/cupertino/jquery-ui-1.8.18.custom.css HTTP/1.1" 200 OK
+INFO:     10.7.0.2:58435 - "GET /js/jquery-1.7.1.min.js HTTP/1.1" 200 OK
+INFO:     10.7.0.2:58434 - "GET /js/base64.js HTTP/1.1" 200 OK
+INFO:     10.7.0.2:58436 - "GET /js/jquery-ui-1.8.18.custom.min.js HTTP/1.1" 200 OK
+INFO:     10.7.0.2:58434 - "GET /js/canvas2image.js HTTP/1.1" 200 OK
+INFO:     10.7.0.2:58433 - "GET /js/syntree.js HTTP/1.1" 200 OK
+INFO:     193.118.53.202:44084 - "GET / HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59045 - "GET / HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59045 - "GET /js/base64.js HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:59046 - "GET /css/cupertino/jquery-ui-1.8.18.custom.css HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:59047 - "GET /js/canvas2image.js HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:59045 - "GET /js/syntree.js HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:59048 - "GET /js/jquery-ui-1.8.18.custom.min.js HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:59046 - "GET /js/jquery-1.7.1.min.js HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:59045 - "GET /css/cupertino/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:59046 - "GET /css/cupertino/images/ui-bg_glass_80_d7ebf9_1x400.png HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:59047 - "GET /css/cupertino/images/ui-bg_glass_50_3baae3_1x400.png HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:59045 - "GET /all_writings HTTP/1.1" 307 Temporary Redirect
+INFO:     10.7.0.2:59045 - "GET /all_writings/ HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59051 - "GET /writing_interface HTTP/1.1" 307 Temporary Redirect
+INFO:     10.7.0.2:59051 - "GET /writing_interface/ HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59053 - "GET / HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59053 - "GET /writing_interface HTTP/1.1" 307 Temporary Redirect
+INFO:     10.7.0.2:59053 - "GET /writing_interface/ HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59053 - "GET / HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59053 - "GET /all_writings HTTP/1.1" 307 Temporary Redirect
+INFO:     10.7.0.2:59053 - "GET /all_writings/ HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59063 - "GET / HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59065 - "GET /css/cupertino/images/ui-bg_glass_100_e4f1fb_1x400.png HTTP/1.1" 200 OK
+INFO:     147.92.179.119:62772 - "GET / HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59074 - "GET / HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59073 - "GET /css/cupertino/jquery-ui-1.8.18.custom.css HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59074 - "GET /js/jquery-1.7.1.min.js HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59075 - "GET /js/jquery-ui-1.8.18.custom.min.js HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59076 - "GET /js/base64.js HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59073 - "GET /js/canvas2image.js HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59076 - "GET /js/syntree.js HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59073 - "GET /css/cupertino/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59074 - "GET /css/cupertino/images/ui-bg_glass_80_d7ebf9_1x400.png HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59075 - "GET /css/cupertino/images/ui-bg_glass_50_3baae3_1x400.png HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59078 - "GET / HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59079 - "GET /writing_interface HTTP/1.1" 307 Temporary Redirect
+INFO:     10.7.0.2:59079 - "GET /writing_interface/ HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59079 - "GET /all_writings HTTP/1.1" 307 Temporary Redirect
+INFO:     10.7.0.2:59079 - "GET /all_writings/ HTTP/1.1" 200 OK
+INFO:     10.7.0.4:56529 - "GET / HTTP/1.1" 200 OK
+INFO:     10.7.0.4:56530 - "GET /css/cupertino/jquery-ui-1.8.18.custom.css HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.4:56531 - "GET /js/canvas2image.js HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.4:56534 - "GET /js/syntree.js HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.4:56533 - "GET /js/jquery-ui-1.8.18.custom.min.js HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.4:56532 - "GET /js/base64.js HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.4:56529 - "GET /js/jquery-1.7.1.min.js HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.4:56530 - "GET /css/cupertino/images/ui-bg_glass_80_d7ebf9_1x400.png HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.4:56531 - "GET /css/cupertino/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.4:56534 - "GET /css/cupertino/images/ui-bg_glass_50_3baae3_1x400.png HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45386 - "GET / HTTP/1.1" 200 OK
+INFO:     192.76.8.64:45386 - "GET /js/jquery-ui-1.8.18.custom.min.js HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45384 - "GET /js/jquery-1.7.1.min.js HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45390 - "GET /js/base64.js HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45394 - "GET /css/cupertino/jquery-ui-1.8.18.custom.css HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45388 - "GET /js/canvas2image.js HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45392 - "GET /js/syntree.js HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45390 - "GET /css/cupertino/images/ui-bg_glass_80_d7ebf9_1x400.png HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45394 - "GET /css/cupertino/images/ui-bg_glass_50_3baae3_1x400.png HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45384 - "GET /css/cupertino/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45396 - "GET / HTTP/1.1" 200 OK
+INFO:     192.76.8.64:45398 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.76.8.64:45402 - "GET / HTTP/1.1" 200 OK
+INFO:     192.76.8.64:45404 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     10.7.0.4:56614 - "GET / HTTP/1.1" 200 OK
+INFO:     192.76.8.64:45410 - "GET / HTTP/1.1" 200 OK
+INFO:     192.76.8.64:45412 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.76.8.64:45410 - "GET / HTTP/1.1" 200 OK
+INFO:     192.76.8.64:45410 - "GET / HTTP/1.1" 200 OK
+INFO:     192.76.8.64:45414 - "GET /js/jquery-1.7.1.min.js HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45410 - "GET /js/jquery-ui-1.8.18.custom.min.js HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45416 - "GET /js/base64.js HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45414 - "GET /js/canvas2image.js HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45418 - "GET /js/syntree.js HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.4:56616 - "GET / HTTP/1.1" 200 OK
+INFO:     18.162.231.39:1752 - "GET / HTTP/1.1" 200 OK
+INFO:     18.162.231.39:52443 - "GET /css/cupertino/jquery-ui-1.8.18.custom.css HTTP/1.1" 200 OK
+INFO:     18.162.231.39:31483 - "GET /js/jquery-1.7.1.min.js HTTP/1.1" 200 OK
+INFO:     18.162.231.39:1752 - "GET /js/jquery-ui-1.8.18.custom.min.js HTTP/1.1" 200 OK
+INFO:     18.162.231.39:13743 - "GET /js/base64.js HTTP/1.1" 200 OK
+INFO:     18.162.231.39:4365 - "GET /js/canvas2image.js HTTP/1.1" 200 OK
+INFO:     18.162.231.39:49205 - "GET /js/syntree.js HTTP/1.1" 200 OK
+INFO:     18.162.231.39:1752 - "GET /css/cupertino/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png HTTP/1.1" 200 OK
+INFO:     18.162.231.39:31483 - "GET /css/cupertino/images/ui-bg_glass_80_d7ebf9_1x400.png HTTP/1.1" 200 OK
+INFO:     18.162.231.39:49205 - "GET /css/cupertino/images/ui-bg_glass_50_3baae3_1x400.png HTTP/1.1" 200 OK
+INFO:     18.162.231.39:49205 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     18.162.231.39:49205 - "GET /css/cupertino/images/ui-bg_glass_100_e4f1fb_1x400.png HTTP/1.1" 200 OK
+INFO:     185.254.196.223:33156 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     185.254.196.223:34234 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     45.146.165.37:48258 - "GET /solr/admin/info/system?wt=json HTTP/1.1" 404 Not Found
+INFO:     10.7.0.2:59416 - "GET / HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59415 - "GET /js/base64.js HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:59416 - "GET /js/canvas2image.js HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:59417 - "GET /css/cupertino/jquery-ui-1.8.18.custom.css HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:59418 - "GET /js/syntree.js HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:59415 - "GET /js/jquery-ui-1.8.18.custom.min.js HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:59416 - "GET /js/jquery-1.7.1.min.js HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:59415 - "GET /css/cupertino/images/ui-bg_glass_80_d7ebf9_1x400.png HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:59416 - "GET /css/cupertino/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:59417 - "GET /css/cupertino/images/ui-bg_glass_50_3baae3_1x400.png HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:59445 - "GET / HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59447 - "POST /related/go HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59448 - "GET /all_writings HTTP/1.1" 307 Temporary Redirect
+INFO:     10.7.0.2:59448 - "GET /all_writings/ HTTP/1.1" 200 OK
+INFO:     71.184.128.251:37363 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_readers.py", line 72, in maybe_read_from_IDLE_client
+    matches = validate(
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_util.py", line 88, in validate
+    raise LocalProtocolError(msg)
+h11._util.RemoteProtocolError: illegal request line: bytearray(b'\x16\x03\x01\x00M\x01\x00\x00I\x03\x03\xba\xd0\xd5\xb2\xd2A\x16$\xcd \x84|\xa8\xd7\xeed\x12\xba\xab{tCj\xf4q\xff\x1a\xd8.\x8f\xd5\xe1 ~i')
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+INFO:     10.7.0.2:59473 - "GET / HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59474 - "GET / HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59475 - "GET /css/cupertino/jquery-ui-1.8.18.custom.css HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:59474 - "GET /js/jquery-1.7.1.min.js HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:59476 - "GET /js/base64.js HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:59473 - "GET /js/syntree.js HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:59475 - "GET /js/canvas2image.js HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:59474 - "GET /js/jquery-ui-1.8.18.custom.min.js HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:59473 - "GET / HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59474 - "GET /css/cupertino/jquery-ui-1.8.18.custom.css HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59475 - "GET /js/base64.js HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59476 - "GET /js/jquery-1.7.1.min.js HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59473 - "GET /js/syntree.js HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59475 - "GET /js/canvas2image.js HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59474 - "GET /js/jquery-ui-1.8.18.custom.min.js HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59477 - "GET /css/cupertino/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59478 - "GET /css/cupertino/images/ui-bg_glass_80_d7ebf9_1x400.png HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59479 - "GET /css/cupertino/images/ui-bg_glass_50_3baae3_1x400.png HTTP/1.1" 200 OK
+INFO:     146.59.163.2:47009 - "GET / HTTP/1.1" 200 OK
+INFO:     45.146.165.37:46772 - "GET /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php> HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59546 - "GET / HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59545 - "GET /css/cupertino/jquery-ui-1.8.18.custom.css HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:59547 - "GET /js/canvas2image.js HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:59546 - "GET /js/base64.js HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:59548 - "GET /js/syntree.js HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:59545 - "GET /js/jquery-ui-1.8.18.custom.min.js HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:59547 - "GET /js/jquery-1.7.1.min.js HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:59545 - "GET /css/cupertino/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:59546 - "GET /css/cupertino/images/ui-bg_glass_80_d7ebf9_1x400.png HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:59547 - "GET /css/cupertino/images/ui-bg_glass_50_3baae3_1x400.png HTTP/1.1" 304 Not Modified
+INFO:     152.37.68.224:41788 - "GET / HTTP/1.1" 200 OK
+INFO:     152.37.68.224:41788 - "GET /css/cupertino/jquery-ui-1.8.18.custom.css HTTP/1.1" 200 OK
+INFO:     152.37.68.224:41926 - "GET /js/jquery-1.7.1.min.js HTTP/1.1" 200 OK
+INFO:     152.37.68.224:44680 - "GET /js/jquery-ui-1.8.18.custom.min.js HTTP/1.1" 200 OK
+INFO:     152.37.68.224:42928 - "GET /js/base64.js HTTP/1.1" 200 OK
+INFO:     152.37.68.224:45188 - "GET /js/canvas2image.js HTTP/1.1" 200 OK
+INFO:     152.37.68.224:41788 - "GET /js/syntree.js HTTP/1.1" 200 OK
+INFO:     152.37.68.224:41926 - "GET /css/cupertino/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png HTTP/1.1" 200 OK
+INFO:     152.37.68.224:44680 - "GET /css/cupertino/images/ui-bg_glass_80_d7ebf9_1x400.png HTTP/1.1" 200 OK
+INFO:     152.37.68.224:45188 - "GET /css/cupertino/images/ui-bg_glass_50_3baae3_1x400.png HTTP/1.1" 200 OK
+INFO:     152.37.68.224:45188 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     82.200.91.254:53543 - "GET / HTTP/1.1" 200 OK
+INFO:     45.146.165.37:53776 - "GET /?XDEBUG_SESSION_START=phpstorm HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59593 - "GET / HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59593 - "GET /css/cupertino/jquery-ui-1.8.18.custom.css HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59595 - "GET /js/jquery-1.7.1.min.js HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59596 - "GET /js/jquery-ui-1.8.18.custom.min.js HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59597 - "GET /js/base64.js HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59593 - "GET /js/canvas2image.js HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59597 - "GET /js/syntree.js HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59593 - "GET /css/cupertino/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59595 - "GET /css/cupertino/images/ui-bg_glass_80_d7ebf9_1x400.png HTTP/1.1" 200 OK
+INFO:     10.7.0.2:59596 - "GET /css/cupertino/images/ui-bg_glass_50_3baae3_1x400.png HTTP/1.1" 200 OK
+INFO:     194.31.98.117:32854 - "GET / HTTP/1.1" 200 OK
+INFO:     194.31.98.117:42188 - "POST /HNAP1/ HTTP/1.1" 404 Not Found
+INFO:     45.146.165.37:43136 - "GET /console/ HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+INFO:     96.126.112.220:36844 - "GET /8u9v HTTP/1.1" 404 Not Found
+INFO:     96.126.112.220:36876 - "GET /pVTC HTTP/1.1" 404 Not Found
+INFO:     104.209.233.178:63009 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     104.209.233.178:63054 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     103.162.30.101:43760 - "POST /boaform/admin/formLogin HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/starlette/routing.py", line 685, in __call__
+    await self.default(scope, receive, send)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/starlette/routing.py", line 579, in not_found
+    raise HTTPException(status_code=404)
+starlette.exceptions.HTTPException
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_readers.py", line 71, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("no request line received")
+h11._util.RemoteProtocolError: no request line received
+INFO:     159.75.25.179:59954 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     159.75.25.179:59954 - "GET / HTTP/1.1" 200 OK
+INFO:     159.75.25.179:59954 - "GET /test_404_page/ HTTP/1.1" 404 Not Found
+INFO:     159.75.25.179:42848 - "GET //favicon.ico HTTP/1.1" 404 Not Found
+INFO:     185.254.196.223:46812 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     185.254.196.223:47874 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     94.102.49.193:53674 - "GET / HTTP/1.1" 200 OK
+INFO:     94.102.49.193:56100 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     94.102.49.193:56140 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     94.102.49.193:56218 - "GET /.well-known/security.txt HTTP/1.1" 404 Not Found
+INFO:     94.102.49.193:56640 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+INFO:     60.246.240.179:4733 - "GET / HTTP/1.0" 200 OK
+INFO:     35.233.62.116:40032 - "GET / HTTP/1.1" 200 OK
+INFO:     45.146.165.37:50670 - "GET /_ignition/execute-solution HTTP/1.1" 404 Not Found
+INFO:     45.146.165.37:36034 - "GET / HTTP/1.1" 200 OK
+INFO:     10.7.0.2:54917 - "GET / HTTP/1.1" 200 OK
+INFO:     10.7.0.2:54917 - "GET /css/cupertino/jquery-ui-1.8.18.custom.css HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:54918 - "GET /js/base64.js HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:54917 - "GET /js/jquery-ui-1.8.18.custom.min.js HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:54919 - "GET /js/canvas2image.js HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:54920 - "GET /js/jquery-1.7.1.min.js HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:54918 - "GET /js/syntree.js HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:54917 - "GET /css/cupertino/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:54918 - "GET /css/cupertino/images/ui-bg_glass_80_d7ebf9_1x400.png HTTP/1.1" 304 Not Modified
+INFO:     10.7.0.2:54919 - "GET /css/cupertino/images/ui-bg_glass_50_3baae3_1x400.png HTTP/1.1" 304 Not Modified
+INFO:     66.249.66.35:54144 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     66.249.66.35:54144 - "GET / HTTP/1.1" 200 OK
+INFO:     38.68.41.110:54112 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     38.68.41.110:54195 - "POST / HTTP/1.1" 405 Method Not Allowed
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+INFO:     192.241.213.149:57888 - "GET / HTTP/1.1" 200 OK
+INFO:     45.146.165.37:39626 - "POST /cgi-bin/../../../../bin/sh HTTP/1.1" 404 Not Found
+INFO:     66.249.66.35:54700 - "GET /css/cupertino/jquery-ui-1.8.18.custom.css HTTP/1.1" 200 OK
+INFO:     45.146.165.37:48488 - "GET / HTTP/1.1" 200 OK
+INFO:     66.249.66.32:61741 - "GET /writings HTTP/1.1" 404 Not Found
+INFO:     103.216.186.3:43663 - "GET / HTTP/1.1" 200 OK
+INFO:     185.254.196.223:32882 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     185.254.196.223:33492 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     175.107.2.26:22315 - "GET /boaform/admin/formLogin?username=user&psd=user HTTP/1.0" 404 Not Found
+INFO:     217.155.105.37:63052 - "GET / HTTP/1.1" 200 OK
+INFO:     217.155.105.37:63051 - "GET /js/jquery-1.7.1.min.js HTTP/1.1" 200 OK
+INFO:     217.155.105.37:63052 - "GET /css/cupertino/jquery-ui-1.8.18.custom.css HTTP/1.1" 200 OK
+INFO:     217.155.105.37:63053 - "GET /js/jquery-ui-1.8.18.custom.min.js HTTP/1.1" 200 OK
+INFO:     217.155.105.37:63054 - "GET /js/base64.js HTTP/1.1" 200 OK
+INFO:     217.155.105.37:63055 - "GET /js/canvas2image.js HTTP/1.1" 200 OK
+INFO:     217.155.105.37:63056 - "GET /js/syntree.js HTTP/1.1" 200 OK
+INFO:     217.155.105.37:63052 - "GET /css/cupertino/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png HTTP/1.1" 200 OK
+INFO:     217.155.105.37:63051 - "GET /css/cupertino/images/ui-bg_glass_80_d7ebf9_1x400.png HTTP/1.1" 200 OK
+INFO:     217.155.105.37:63053 - "GET /css/cupertino/images/ui-bg_glass_50_3baae3_1x400.png HTTP/1.1" 200 OK
+INFO:     217.155.105.37:63057 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     217.155.105.37:63052 - "POST /related/go HTTP/1.1" 200 OK
+INFO:     217.155.105.37:63059 - "POST /related/go HTTP/1.1" 200 OK
+INFO:     217.155.105.37:63059 - "POST /related/play HTTP/1.1" 200 OK
+INFO:     217.155.105.37:63060 - "POST /related/fuck HTTP/1.1" 200 OK
+INFO:     45.164.35.195:5490 - "GET / HTTP/1.1" 200 OK
+INFO:     217.155.105.37:63120 - "GET / HTTP/1.1" 200 OK
+INFO:     217.155.105.37:63118 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     217.155.105.37:63118 - "GET /css/cupertino/images/ui-bg_glass_100_e4f1fb_1x400.png HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+INFO:     64.62.197.92:22124 - "GET / HTTP/1.1" 200 OK
+INFO:     194.58.180.101:2789 - "GET / HTTP/1.1" 200 OK
+INFO:     185.254.196.223:46218 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     185.254.196.223:47548 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     159.65.242.215:55942 - "GET / HTTP/1.1" 200 OK
+INFO:     170.130.187.34:60968 - "GET / HTTP/1.0" 200 OK
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+INFO:     103.161.17.249:55796 - "GET / HTTP/1.1" 200 OK
+INFO:     3.235.84.27:34182 - "GET /.git/config HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+INFO:     31.210.20.109:56730 - "GET / HTTP/1.1" 200 OK
+INFO:     31.210.20.109:43148 - "POST /HNAP1/ HTTP/1.1" 404 Not Found
+INFO:     115.52.0.38:58481 - "GET /boaform/admin/formLogin?username=admin&psd=admin HTTP/1.0" 404 Not Found
+INFO:     185.254.196.223:56758 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     185.254.196.223:57486 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     185.180.143.8:38542 - "GET / HTTP/1.1" 200 OK
+INFO:     178.73.215.171:47760 - "GET / HTTP/1.0" 200 OK
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_readers.py", line 75, in maybe_read_from_IDLE_client
+    return Request(
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_events.py", line 71, in __init__
+    self._validate()
+  File "/root/.cache/pypoetry/virtualenvs/word2vec-DJhyN2bZ-py3.8/lib/python3.8/site-packages/h11/_events.py", line 140, in _validate
+    raise LocalProtocolError("Missing mandatory Host: header")
+h11._util.RemoteProtocolError: Missing mandatory Host: header
+INFO:     183.136.226.3:4056 - "GET / HTTP/1.1" 200 OK
+INFO:     183.136.226.3:24772 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     142.93.34.32:60454 - "GET / HTTP/1.1" 200 OK
+INFO:     40.117.86.197:56390 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     40.117.86.197:56408 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     193.118.53.202:50604 - "GET / HTTP/1.1" 200 OK
+INFO:     185.254.196.223:46568 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     185.254.196.223:48068 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     109.237.103.9:45152 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     83.218.213.139:55452 - "GET / HTTP/1.1" 200 OK
+INFO:     222.244.194.155:1921 - "POST /HNAP1/ HTTP/1.0" 404 Not Found
+INFO:     44.200.8.162:53538 - "GET / HTTP/1.1" 200 OK
+INFO:     193.118.53.202:35024 - "GET / HTTP/1.1" 200 OK
+INFO:     139.162.45.221:46950 - "GET / HTTP/1.1" 200 OK
+INFO:     45.79.204.46:54896 - "GET / HTTP/1.1" 200 OK
+INFO:     201.245.165.67:42362 - "GET / HTTP/1.1" 200 OK
+INFO:     185.254.196.223:43140 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     185.254.196.223:45606 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     192.76.8.64:45422 - "GET / HTTP/1.1" 200 OK
+INFO:     192.76.8.64:45422 - "GET /css/cupertino/jquery-ui-1.8.18.custom.css HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45426 - "GET /js/jquery-ui-1.8.18.custom.min.js HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45428 - "GET /js/base64.js HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45424 - "GET /js/jquery-1.7.1.min.js HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45430 - "GET /js/canvas2image.js HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45432 - "GET /js/syntree.js HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45426 - "GET /css/cupertino/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45424 - "GET /css/cupertino/images/ui-bg_glass_50_3baae3_1x400.png HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45432 - "GET /css/cupertino/images/ui-bg_glass_80_d7ebf9_1x400.png HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45434 - "GET /css/cupertino/images/ui-bg_glass_100_e4f1fb_1x400.png HTTP/1.1" 304 Not Modified
+INFO:     192.76.8.64:45438 - "POST /related/go HTTP/1.1" 200 OK
+INFO:     192.76.8.64:45440 - "GET /all_writings HTTP/1.1" 307 Temporary Redirect
+INFO:     192.76.8.64:45442 - "GET /all_writings/ HTTP/1.1" 200 OK
+INFO:     192.76.8.64:45446 - "GET /all_writings/ HTTP/1.1" 200 OK
+INFO:     192.76.8.64:45446 - "GET /all_writings/ HTTP/1.1" 200 OK
+INFO:     172.104.138.223:15084 - "GET /fuN3 HTTP/1.0" 404 Not Found
+INFO:     104.45.193.9:23054 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     104.45.193.9:23179 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     104.45.193.9:23314 - "GET /core/.env HTTP/1.1" 404 Not Found
+INFO:     104.45.193.9:23447 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     104.45.193.9:23560 - "GET /app/.env HTTP/1.1" 404 Not Found
+INFO:     104.45.193.9:23681 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     104.45.193.9:23795 - "GET /public/.env HTTP/1.1" 404 Not Found
+INFO:     104.45.193.9:23910 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     172.70.6.105:34356 - "GET / HTTP/1.1" 200 OK
+INFO:     20.85.233.73:57763 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     20.85.233.73:57785 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     34.140.248.32:60754 - "GET / HTTP/1.1" 200 OK
+INFO:     Started server process [133207]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)

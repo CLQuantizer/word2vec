@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <head>
-<title>Ezio HOME </title>
+<title>HOME </title>
 <meta http-equiv="X-UA-Compatible" content="IE=9" />
 	<meta name="description" content="An app for producing linguistics syntax trees from labelled bracket notation." />
 	<link rel="canonical" href="http://mshang.ca/syntree" />
 	<title>Syntax Tree Generator</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-25344866-1']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+	</s
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <ul style = 'text-align: left'>
-  <li><a href="/">Home </a></li>
-  <li><a href="/writing_interface"> To write a new essay</a></li>
-  <li><a href="/all_writings">All writings</a> click to see all writings</li>
+  <li><a href="/">Home </a></li><li><a href="/writings"> Writings</a></li>
 </ul>
 
 <body style ="text-align: center">
@@ -19,19 +28,20 @@
         <div id ='word_rel' style="width: 50%; height: 1000px; float: left;"> 
             <h3><b>Welcome to the Related Word API</b></h3>
 		<div id ="sent" style = 'text-align: center;font-size:14px;font-family: Garamond;'>{{sent}}</div>
- 		<p>Note that some words may not be in the vocab</p>
+ 		<p>Note that some words may not be in the vocab</p><br></br><br></br>
 		<form id = 'wform' method="POST" style ="text-align: center">
 		  <label for="word">Search related words:</label>
 		  <input type="text" id="w" value="go">  <input type="submit" value="Search">
 		</form>
-	<br></br><br></br>
         </div>
         <div style="margin-left: 50%; height: 1000px;"> 
+            <h3><b>Syntax Tree Widget</b><h3>
 
+	<a href="https://github.com/mshang/syntree"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
 		<div id="accordion">
 		<h3><a href="#">Syntax Tree Generator</a></h3><div style="text-align:left">
-			<textarea id="i" rows="4">[S [NP Syntax] [VP [V is] [^NP a mistake]]]</textarea>
-			(C) 2011 by <a href="http://mshang.ca/">Miles Shang</a>, see <a href="{{url_for('static',path="/LICENSE.txt")}}">license</a>.
+			<textarea id="i" rows="4">[S [NP This] [VP [V is] [^NP a wug]]]</textarea>
+			(C) 2011 by <a href="http://mshang.ca/">Miles Shang</a>, see <a href="LICENSE.txt">license</a>.
 		</div>
 		
 		<h3><a href="#">Options</a></h3><div>
@@ -41,8 +51,8 @@
 				<tr>
 					<td colspan="2" align="center"><div id="font-style-radio" class="nobr">
 						<input type="radio" name="font-style" id="serif" value="serif" class="redraw" /><label for="serif">Serif</label>
-						<input type="radio" name="font-style" id="sans-serif" value="sans-serif" class="redraw"/><label for="sans-serif">Sans-Serif</label>
-						<input type="radio" name="font-style" id="monospace" value="monospace" class="redraw" checked/><label for="monospace">Monospace</label>
+						<input type="radio" name="font-style" id="sans-serif" value="sans-serif" class="redraw" checked /><label for="sans-serif">Sans-Serif</label>
+						<input type="radio" name="font-style" id="monospace" value="monospace" class="redraw" /><label for="monospace">Monospace</label>
 					</div></td>
 				</tr>
 				<tr>
@@ -51,7 +61,7 @@
 				</tr>
 				<tr>
 					<td align="center"><div id="term-font-check" class="nobr">
-						<input type="checkbox" id="term-bold" class="redraw" checked/><label for="term-bold">Bold</label>
+						<input type="checkbox" id="term-bold" class="redraw" /><label for="term-bold">Bold</label>
 						<input type="checkbox" id="term-ital" class="redraw" /><label for="term-ital">Italic</label>
 					</span></td>
 					<td align="center"><div id="nonterm-font-check" class="nobr">
@@ -73,7 +83,7 @@
 				</tr>
 				<tr>
 					<td align="center" colspan="2"><div class="nobr">
-						<input type="checkbox" id="color-check" class="redraw"/><label for="color-check">Color</label>
+						<input type="checkbox" id="color-check" class="redraw" checked /><label for="color-check">Color</label>
 						<input type="checkbox" id="term-lines" class="redraw" checked /><label for="term-lines">Terminal lines</label>
 						<a href="#" id="make-link">Link</a>
 					</div></td>
@@ -110,12 +120,13 @@ a.example { text-decoration: none; color: #4183C4!important; }
 img { border: 1px solid #bbbbbb; }
 .nobr { white-space: nowrap; }
 </style>
-<link type="text/css" href="{{ url_for('static', path="/css/cupertino/jquery-ui-1.8.18.custom.css")}}" rel="stylesheet" />
-<script type="text/javascript" src="{{url_for('static', path="/js/jquery-1.7.1.min.js")}}"></script>
-<script type="text/javascript" src="{{url_for('static', path="/js/jquery-ui-1.8.18.custom.min.js")}}"></script>
-<script type="text/javascript" src="{{url_for('static', path="/js/base64.js")}}"></script>
-<script type="text/javascript" src="{{url_for('static', path="/js/canvas2image.js")}}"></script>
-<script type="text/javascript" src="{{url_for('static', path="/js/syntree.js")}}"></script>
+
+<link type="text/css" href="css/cupertino/jquery-ui-1.8.18.custom.css" rel="stylesheet" />	
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.18.custom.min.js"></script>
+<script type="text/javascript" src="js/base64.js"></script>
+<script type="text/javascript" src="js/canvas2image.js"></script>
+<script type="text/javascript" src="js/syntree.js"></script>
 <script type="text/javascript">
 
 function handler(font_size_update, vert_space_update, hor_space_update) {
@@ -173,7 +184,7 @@ $(function() {
 	// UI
 	$("#make-link, #color-check, #term-lines").button();
 	$("#font-size-slider").slider({value: 12, min: 8, max: 16, step: 1});
-	$("#vert-space-slider").slider({value: 70, min: 35, max: 70, step: 5});
+	$("#vert-space-slider").slider({value: 35, min: 35, max: 70, step: 5});
 	$("#hor-space-slider").slider({value: 10, min: 10, max: 50, step: 5});
 	$("#font-style-radio, #term-font-check, #nonterm-font-check").buttonset();
 	$("#accordion").accordion({collapsible: true, icons: false, autoHeight: false});

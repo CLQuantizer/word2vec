@@ -13,6 +13,8 @@ uvicorn = "^0.17.0"
 Jinja2 = "^3.0.3"
 requests = "^2.27.1"
 pytest = "^7.1.0"
+SQLAlchemy = "^1.4.32"
+psycopg2-binary = "^2.9.3"
 
 [tool.poetry.dev-dependencies]
 fastapi = "^0.71.0"

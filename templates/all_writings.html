@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>All Writings</title>
+</head>
+<body>
+<ul style = 'text-align: left'>
+  <li><a href="/">Home Page</a></li>
+  <li><a href="/writing_interface"> To write a new essay</a></li>
+  <li><a href="/all_writings">All writings</a></li>
+</ul>
+
+<div style="width:800px; margin:0 auto;">
+<br>
+<br>
+ {% for t in writings%} 
+ <button class="colla" style="font-size:16px; display:block;"> No.{{t.id}}: {{t['title']}}</button>
+ <p class="content" style="display:block;">{{t['body']}}</p>
+ {% endfor %}
+</div>
+</body>
+</html>
+<script>
+var coll = document.getElementsByClassName("colla");
+var i;
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    //this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+} </script>

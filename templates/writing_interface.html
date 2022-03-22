@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+<title>To write a new essay</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<ul style = 'text-align: left'>
+  <li><a href="/">Home </a></li>
+  <li><a href="/writing_interface"> To write a new essay</a></li>
+  <li><a href="/all_writings">All writings</a></li>
+</ul>
+
+<body>
+<p>Submit a new writing here. And it will be stored in the database in All Writings</p>
+<p>Authentification is being developed <br></br></p>
+
+<form id="writing" method="POST">
+   <div> <textarea type="text" id="title">title is here</textarea><br></br></div>
+  <textarea id="body" rows="30" cols="80">writing some thing here </textarea>
+  <input type="submit" onclick="myFunction()" value="Go">
+<script>
+
+function myFunction() {
+  alert("The writing has been submitted");
+}
+</script>
+</form>
+</body>
+</html>
+
+<script>
+$(document).ready(function () {
+  $("form").submit(function (event) {
+    var formData = {title:$("#title").val(),body:$("#body").val()};
+    $.ajax({
+      type: "POST",
+      url: "/writings/{writing_id}",
+      data: JSON.stringify(formData),
+      dataType:"application/json",
+      contentType: "application/json; charset=utf-8",
+      encode: true,
+      success: function(){pass;}
+     });
+    event.preventDefault();
+  });
+});
+
+</script>
+
